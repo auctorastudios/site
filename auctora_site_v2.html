@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auctora Consulting</title>
+  <style>
+    /* Base styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; background: #fff; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* Container */
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+    /* Header & Nav */
+    header { background: #fff; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #eee; }
+    .nav-wrap { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .logo { font-weight: bold; font-size: 1.5rem; color: #111; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { font-size: 0.95rem; font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: #0077cc; }
+    .cta-btn { padding: 0.6rem 1.2rem; background: #0077cc; color: #fff; border-radius: 4px; font-weight: 600; }
+    .cta-btn:hover { background: #005fa3; }
+
+    /* Mobile Nav Toggle */
+    .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+    @media(max-width: 768px) {
+      nav { display: none; flex-direction: column; background: #fff; position: absolute; top: 100%; right: 0; width: 200px; border: 1px solid #eee; }
+      nav.open { display: flex; }
+      .menu-toggle { display: block; }
+    }
+
+    /* Hero */
+    .hero { background: #f0f8ff; padding: 4rem 0; text-align: center; }
+    .hero h1 { font-size: 2.5rem; color: #111; margin-bottom: 1rem; }
+    .hero p { font-size: 1.125rem; color: #555; margin-bottom: 2rem; }
+
+    /* Sections */
+    section { padding: 4rem 0; }
+    h2 { font-size: 2rem; margin-bottom: 1rem; text-align: center; }
+    p { color: #555; }
+
+    /* Grid Cards */
+    .grid { display: grid; gap: 2rem; }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .card { background: #fff; border: 1px solid #eee; border-radius: 6px; padding: 1.5rem; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    .card-icon { font-size: 2.5rem; margin-bottom: 1rem; color: #0077cc; }
+    .card-title { font-weight: 600; margin-bottom: 0.5rem; }
+    .card-text { font-size: 0.95rem; color: #555; }
+
+    /* Segment Tabs */
+    .tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; }
+    .tab-btn { padding: 0.75rem 1.5rem; border: 1px solid #0077cc; border-radius: 4px; background: #fff; color: #0077cc; cursor: pointer; font-weight: 600; }
+    .tab-btn.active, .tab-btn:hover { background: #0077cc; color: #fff; }
+
+    /* Service Matrix Table */
+    .table-responsive { overflow-x: auto; margin-bottom: 2rem; }
+    table.service-matrix { width: 100%; border-collapse: collapse; }
+    table.service-matrix th, table.service-matrix td { border: 1px solid #eee; padding: 0.75rem; text-align: left; }
+    table.service-matrix th { background: #f5f5f5; }
+
+    /* Contact Section */
+    .contact-buttons { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
+    @media (max-width: 480px) { .contact-buttons { flex-direction: column; } }
+
+    /* Testimonial */
+    .testimonial { background: #0077cc; color: #fff; padding: 2rem; border-radius: 6px; text-align: center; }
+    .testimonial p { font-style: italic; margin-bottom: 1rem; }
+    .testimonial cite { font-weight: 600; display: block; }
+
+    /* CTA Banner */
+    .banner { background: #0077cc; color: #fff; padding: 3rem 0; text-align: center; }
+    .banner h2 { font-size: 1.75rem; margin-bottom: 1rem; }
+    .banner .cta-btn { background: #fff; color: #0077cc; }
+
+    /* Footer */
+    footer { background: #f1f1f1; padding: 2rem 0; text-align: center; font-size: 0.875rem; }
+    footer a { color: #0077cc; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-wrap">
+      <div class="logo">Auctora Consulting</div>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <nav id="nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="cta-btn">Free Evaluation</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Right-Sized Digital Solutions<br>For San Antonio Businesses</h1>
+      <p>Custom branding, websites, NFC & event tech, digital marketing, and automation—designed for your growth stage.</p>
+      <a href="#contact" class="cta-btn">Book My Free Evaluation</a>
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <h2>About Auctora</h2>
+    <p style="max-width:800px; margin:0 auto; text-align:center;">Auctora Consulting is a four-person digital consultancy in San Antonio. We blend sweat‑equity branding, streamlined web builds, NFC & event tech, targeted marketing, and smart automation to deliver just what your business needs—nothing more, nothing less.</p>
+  </section>
+
+  <section id="services" class="container">
+    <h2>What We Offer</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-icon">🎨</div>
+        <div class="card-title">Branding & Design</div>
+        <div class="card-text">Logos, collateral, event assets & merchandise designs to build a memorable identity.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">💻</div>
+        <div class="card-title">Web & E‑Commerce</div>
+        <div class="card-text">From one‑page launches to full online stores with booking or shopping carts.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">📳</div>
+        <div class="card-title">NFC & Event Tech</div>
+        <div class="card-text">Tap‑to‑share cards, badge check‑in, interactive displays & on‑site AV support.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <div class="card-title">Digital Marketing</div>
+        <div class="card-text">SEO, social media, email campaigns & ads that reach your audience where they are.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🤖</div>
+        <div class="card-title">Automation</div>
+        <div class="card-text">CRM integrations, automated workflows & reporting dashboards to save you time.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛠️</div>
+        <div class="card-title">IT & AV Support</div>
+        <div class="card-text">Domain/email setup, on‑site AV, vendor coordination & technology consulting.</div>
+      </div>
+    </div>
+
+    <!-- Segment tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-segment="service">Service Businesses</button>
+      <button class="tab-btn" data-segment="vendor">Vendors</button>
+      <button class="tab-btn" data-segment="event">Event Companies</button>
+    </div>
+
+    <!-- Service Business Matrix -->
+    <div id="service" class="matrix table-responsive">
+      <table class="service-matrix">
+        <thead>
+          <tr><th>Service Area</th><th>Starter<br>($500)</th><th>Growth<br>($1,250)</th><th>Dominance<br>($2,500+)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Branding & Design</td><td>Logo + basic identity</td><td>Logo & brand kit + business cards</td><td>Full brand strategy & merch</td></tr>
+          <tr><td>Web Presence</td><td>One‑page site + SEO basics</td><td>5–10 page site + content</td><td>Custom site + booking/e‑com</td></tr>
+          <tr><td>Digital Marketing</td><td>Local SEO setup</td><td>Email & social setup</td><td>Ongoing SEO & ads</td></tr>
+          <tr><td>Automation</td><td>Contact form & email</td><td>CRM integration</td><td>Custom workflows & reports</td></tr>
+          <tr><td>IT & AV Support</td><td>Domain/email setup</td><td>Basic consulting</td><td>On‑site & remote AV/IT</td></tr>
+          <tr><td><strong>Starting Fee</strong></td><td><strong>$500</strong></td><td><strong>$1,250</strong></td><td><strong>$2,500+</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Vendor Matrix -->
+    <div id="vendor" class="matrix table-responsive" style="display:none;">
+      <table class="service-matrix">
+        <thead>
+          <tr><th>Service Area</th><th>Launch<br>($500)</th><th>Growth Commerce<br>($1,750)</th><th>Vendor Elite<br>($3,000+)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Branding & Design</td><td>Logo & product brochure</td><td>Brand kit & labels</td><td>Full merch & packaging</td></tr>
+          <tr><td>Online Store</td><td>Catalog site or Shopify setup</td><td>50‑product store + training</td><td>Multi‑channel e‑com + automation</td></tr>
+          <tr><td>NFC & Event Tech</td><td>2 NFC cards</td><td>Keychains + analytics</td><td>Interactive product tags</td></tr>
+          <tr><td>Digital Marketing</td><td>SEO basics</td><td>Market integration + ads</td><td>Full marketing retainer</td></tr>
+          <tr><td>Automation</td><td>Inventory sync basics</td><td>CRM & order automations</td><td>Custom pipelines + reporting</td></tr>
+          <tr><td>IT & AV Support</td><td>Platform setup help</td><td>POS/integration consulting</td><td>On‑site pop‑up support</td></tr>
+          <tr><td><strong>Starting Fee</strong></td><td><strong>$500</strong></td><td><strong>$1,750</strong></td><td><strong>$3,000+</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Event Companies Matrix -->
+    <div id="event" class="matrix table-responsive" style="display:none;">
+      <table class="service-matrix">
+        <thead>
+          <tr><th>Service Area</th><th>Starter<br>($500)</th><th>Engage & Grow<br>($1,500)</th><th>Ultimate Event Tech<br>($4,000+)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Branding & Design</td><td>Event logo & flyer</td><td>Site + social templates</td><td>Full branding & merch</td></tr>
+          <tr><td>Event Website</td><td>Landing page</td><td>Registration site</td><td>Custom multi‑page site</td></tr>
+          <tr><td>NFC & Check‑in</td><td>Basic digital badge</td><td>NFC badge + check‑in</td><td>RFID/NFC access system</td></tr>
+          <tr><td>Digital Marketing</td><td>Listing setup</td><td>Social & email campaign</td><td>Advanced ads & analytics</td></tr>
+          <tr><td>IT & AV Support</td><td>Consulting guide</td><td>On‑site AV advice</td><td>On‑site tech support</td></tr>
+          <tr><td><strong>Starting Fee</strong></td><td><strong>$500</strong></td><td><strong>$1,500</strong></td><td><strong>$4,000+</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Ready to Get Started?</h2>
+    <p style="text-align:center; max-width:700px; margin:0 auto;">Select your segment above, choose a tier, then let’s book your free evaluation to see which package fits your goals.</p>
+    <div class="contact-buttons">
+      <a href="mailto:hello@auctoraconsulting.com" class="cta-btn">Email Us</a>
+      <a href="tel:2105551234" class="cta-btn">Call Us</a>
+    </div>
+  </section>
+
+  <section class="container" style="margin-top:2rem;">
+    <div class="testimonial">
+      <p>“Auctora helped us launch our salon website and double our bookings in two months!”</p>
+      <cite>– Jane D., San Antonio Salon Owner</cite>
+    </div>
+  </section>
+
+  <section class="banner">
+    <div class="container">
+      <h2>Not sure where to start?</h2>
+      <a href="#contact" class="cta-btn">Let’s Talk Strategy</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Auctora Consulting &nbsp; | &nbsp; San Antonio, TX</p>
+      <p><a href="mailto:hello@auctoraconsulting.com">hello@auctoraconsulting.com</a> &nbsp; | &nbsp; (210) 555-1234</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('nav').classList.toggle('open');
+    });
+    // Segment tabs logic
+    const tabs = document.querySelectorAll('.tab-btn');
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.matrix').forEach(m => m.style.display = 'none');
+        document.getElementById(btn.dataset.segment).style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
